@@ -85,24 +85,43 @@ tmux_conf_24b_colour=auto
 #   - tmux_conf_theme_synchronized
 tmux_conf_theme=enabled
 
-# default theme
-tmux_conf_theme_colour_1="#080808"    # dark gray
-tmux_conf_theme_colour_2="#303030"    # gray
-tmux_conf_theme_colour_3="#8a8a8a"    # light gray
-tmux_conf_theme_colour_4="#00afff"    # light blue
-tmux_conf_theme_colour_5="#ffff00"    # yellow
-tmux_conf_theme_colour_6="#080808"    # dark gray
-tmux_conf_theme_colour_7="#e4e4e4"    # white
-tmux_conf_theme_colour_8="#080808"    # dark gray
-tmux_conf_theme_colour_9="#ffff00"    # yellow
-tmux_conf_theme_colour_10="#ff00af"   # pink
-tmux_conf_theme_colour_11="#5fff00"   # green
-tmux_conf_theme_colour_12="#8a8a8a"   # light gray
-tmux_conf_theme_colour_13="#e4e4e4"   # white
-tmux_conf_theme_colour_14="#080808"   # dark gray
-tmux_conf_theme_colour_15="#080808"   # dark gray
-tmux_conf_theme_colour_16="#d70000"   # red
-tmux_conf_theme_colour_17="#e4e4e4"   # white
+# original color
+#tmux_conf_theme_colour_1="#080808"    # dark gray
+#tmux_conf_theme_colour_2="#303030"    # gray
+#tmux_conf_theme_colour_3="#8a8a8a"    # light gray
+#tmux_conf_theme_colour_4="#00afff"    # light blue
+#tmux_conf_theme_colour_5="#ffff00"    # yellow
+#tmux_conf_theme_colour_6="#080808"    # dark gray
+#tmux_conf_theme_colour_7="#e4e4e4"    # white
+#tmux_conf_theme_colour_8="#080808"    # dark gray
+#tmux_conf_theme_colour_9="#ffff00"    # yellow
+#tmux_conf_theme_colour_10="#ff00af"   # pink
+#tmux_conf_theme_colour_11="#5fff00"   # green
+#tmux_conf_theme_colour_12="#8a8a8a"   # light gray
+#tmux_conf_theme_colour_13="#e4e4e4"   # white
+#tmux_conf_theme_colour_14="#080808"   # dark gray
+#tmux_conf_theme_colour_15="#080808"   # dark gray
+#tmux_conf_theme_colour_16="#d70000"   # red
+#tmux_conf_theme_colour_17="#e4e4e4"   # white
+
+# Rosé Pine theme
+tmux_conf_theme_colour_1="#191724"    # base (status bar bg)
+tmux_conf_theme_colour_2="#26233a"    # surface (pane border / highlight)
+tmux_conf_theme_colour_3="#e0def4"    # text (inactive window text)
+tmux_conf_theme_colour_4="#9ccfd8"    # foam blue (active window bg / pane border)
+tmux_conf_theme_colour_5="#f6c177"    # gold (message / mode bg)
+tmux_conf_theme_colour_6="#191724"    # dark fg on left section 1 bg
+tmux_conf_theme_colour_7="#e0def4"    # light fg on left section 2 bg (pine is dark)
+tmux_conf_theme_colour_8="#191724"    # dark fg on left section 3 bg
+tmux_conf_theme_colour_9="#eb6f92"    # rose (status left section 1 bg)
+tmux_conf_theme_colour_10="#31748f"   # pine (status left section 2 bg)
+tmux_conf_theme_colour_11="#c4a7e7"   # iris purple (status left section 3 bg)
+tmux_conf_theme_colour_12="#6e6a86"   # muted (dimmed / inactive text)
+tmux_conf_theme_colour_13="#e0def4"   # text (right section text)
+tmux_conf_theme_colour_14="#6e6a86"   # muted — matches time/date font color (hostname fg)
+tmux_conf_theme_colour_15="#191724"   # base (right section bg)
+tmux_conf_theme_colour_16="#eb6f92"   # rose (alerts)
+tmux_conf_theme_colour_17="#191724"   # dark fg on active window label
 
 # default theme (ansi)
 #tmux_conf_theme_colour_1="colour0"
@@ -233,14 +252,14 @@ tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_last_attr="none"
 
 # status left/right sections separators
-tmux_conf_theme_left_separator_main=""
-tmux_conf_theme_left_separator_sub="|"
-tmux_conf_theme_right_separator_main=""
-tmux_conf_theme_right_separator_sub="|"
-#tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
-#tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
-#tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
-#tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
+#tmux_conf_theme_left_separator_main=""
+#tmux_conf_theme_left_separator_sub="|"
+#tmux_conf_theme_right_separator_main=""
+#tmux_conf_theme_right_separator_sub="|"
+tmux_conf_theme_left_separator_main='\uE0B0'  # /!\ you don't need to install Powerline
+tmux_conf_theme_left_separator_sub='\uE0B1'   #   you only need fonts patched with
+tmux_conf_theme_right_separator_main='\uE0B2' #   Powerline symbols or the standalone
+tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see README.md
 
 # status left/right content:
 #   - separate main sections with "|"
@@ -269,7 +288,7 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
+tmux_conf_theme_status_left=" 🥷 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 #tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{pretty_pane_current_path} "
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
@@ -296,7 +315,8 @@ tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="none"
 
 # mouse indicator
-tmux_conf_theme_mouse="↗"                   # U+2197
+#tmux_conf_theme_mouse="↗"                   # U+2197
+tmux_conf_theme_mouse="󰍽"                   # nf-md-mouse
 tmux_conf_theme_mouse_fg="none"
 tmux_conf_theme_mouse_bg="none"
 tmux_conf_theme_mouse_attr="none"
@@ -387,7 +407,7 @@ tmux_conf_urlscan_options="--compact --dedupe"
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
